@@ -79,11 +79,12 @@ for i in range(1, 3):
 	yi = d[i]-l[i]*y[i-1]
 	y.append(yi)
 
+print "y=" + str(y)
+
 #Ux=y:
 x = [0, 0, y[2]/u[2]] #<= this should be xn
 for i in reversed(range(0, 2)):
-	print i
-	xi = y[i]-c[i]*x[i+1]/u[i]
+	xi = (y[i]-c[i]*x[i+1])/u[i]
 	x.insert(i, xi)
 
 print "x=" + str(x)
