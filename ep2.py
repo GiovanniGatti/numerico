@@ -34,9 +34,10 @@ for i in range(1, n):
 print "y=" + str(y)
 
 #Ux=y:
-x = [0, 0, y[n-1]/u[n-1]] #<= this should be xn
+x=[0]*n
+x[n-1] = y[n-1]/u[n-1] #<= this should be xn
 for i in reversed(range(0, n-1)):
 	xi = (y[i]-c[i]*x[i+1])/u[i]
-	x.insert(i, xi)
+	x[i] = xi
 
 print "x=" + str(x)
